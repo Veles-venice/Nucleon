@@ -1,0 +1,23 @@
+{
+  "name": "project-management",
+  "version": "1.0.0",
+  "description": "A customizable project management application featuring visual dashboards and progress tracking for efficient team collaboration.",
+  "homepage": "https://github.com/Veles-venice/Nucleon#readme",
+  "bugs": {
+    "url": "https://github.com/Veles-venice/Nucleon/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Veles-venice/Nucleon.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log(\"hello world\")"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
