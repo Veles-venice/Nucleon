@@ -1,6 +1,6 @@
 window.addEventListener("keydown",(e) => {
   try {
-    if (e.ctrlKey && e.key.toLowerCase() === "k") {
+    if (e.ctrlKey && e.key.toLowerCase() === "y") {
       e.preventDefault();
       console.log("ctrl+k clicked");
     }
@@ -8,3 +8,4 @@ window.addEventListener("keydown",(e) => {
     console.log("an error encountered!");
   }
 });
+
