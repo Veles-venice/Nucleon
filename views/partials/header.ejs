@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="shortcut icon" href="/img/favico.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="shortcut icon" href="img/favico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/shortcuts.js" defer></script>
     <title>Nucleon</title>
 </head>
@@ -13,23 +14,24 @@
     <header>
     <div class="container">
         <h1 id="hela">Nucleon</h1>
-        <div id="search">
-            <input type="search" placeholder="Search (ctrl+y)">
-            <nav>
-                <ul class="list-flex">
-                    <li>My Work</li>
-                    <li>Spaces</li>
-                    <li>Themes</li>
-                    <li>Marketplace</li>
-                    <li>Connect</li>
-                </ul>
-            </nav>
-        </div>
-        <div>
-            <input type="button" value="Login">
-            <input type="button" value="See plans">
-        </div>
-    </div>
+        <input type="search" placeholder="Search (ctrl+y)">
+        <nav>
+            <ul class="navi">
+                <li>My Work</li>
+                <li>Spaces</li>
+                <li>Themes</li>
+                <li>Marketplace</li>
+                <li>Connect</li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="/signup"><input type="button" value="Login"></a>
+                </li>
+                <li>
+                    <a href="#"><input type="button" value="See plans"></a>
+                </li>
+            </ul>
+        </nav>
     </header>
 </body>
 </html>
