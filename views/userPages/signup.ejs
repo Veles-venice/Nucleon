@@ -1,0 +1,13 @@
+<%- include("../partials/header.ejs") %> 
+<form action="/signup" method="post">
+    <input name="first_name" type="text" class="feedback-input" placeholder="First Name" />
+    <input name="last_name" type="text" class="feedback-input" placeholder="Last Name" />
+    <input name="user_name" type="text" class="feedback-input" placeholder="User Name" />
+    <input name="email" type="text" class="feedback-input" placeholder="Email" />
+    <input name="password" type="password" class="feedback-input" placeholder="Password">
+    <input type="submit" value="SUBMIT" />
+
+</form>
+<form action="/login" method="get">
+    <input type="button" value="Login">
+</form>
