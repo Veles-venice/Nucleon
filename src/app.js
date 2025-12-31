@@ -1,13 +1,14 @@
 const express = require("express");
-
 const app = express();
-app.use(express.json());
 
-const authRoutes = require("./routes/auth.routes");
-app.use("/api/auth", authRoutes);
+app.use(express.json());
+app.use(express.static("public"));
+
+app.set("view engine", "ejs");
+app.set("views", "./views");
 
 app.get("/", (req, res) => {
-  res.send("API is running");
+  res.render("index");
 });
 
 module.exports = app;
