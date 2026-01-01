@@ -1,6 +1,6 @@
   
    body{
-    background-color: black;
+    background-color:  rgb(44, 40, 40);
    }
    .topbar{
     display:flex;
@@ -43,12 +43,12 @@
    .mainContent{
     margin-top: 25px;
     margin-left: 10px;
-    color: white;
+    color:  rgb(183, 173, 173);
    }
    .space{
     display:inline-block;
     margin-left: 10px;
-    color: white;
+    color:  rgb(183, 173, 173);
     
 
    }
@@ -81,7 +81,7 @@
     
     a{
         text-decoration: none;
-        color: white;
+        color:  rgb(183, 173, 173);
         cursor: pointer;
     }
     a:hover{
