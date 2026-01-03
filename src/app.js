@@ -1,8 +1,11 @@
 const express = require("express");
+const authMiddleware = require("./middlewares/auth.middleware");
 const app = express();
 
 app.use(express.json());
 app.use(express.static("../public"));
+
+
 
 app.set("view engine", "ejs");
 app.set("views", "../views");
@@ -27,3 +30,4 @@ app.get("/login", (req, res) => {
 
 
 module.exports = app;
+
