@@ -12,7 +12,8 @@ app.get("/", (req, res) => {
   workspaceName: "Vansh Singhal's Workspace",
   workspacePlan: "FREE",
   saveStatus: "Saved · 2s ago",
-  userInitials: "VS"
+  userInitials: "VS",
+  currentWorkingSpace: "Home",
 });
 });
 
