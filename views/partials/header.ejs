@@ -6,27 +6,70 @@
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="shortcut icon" href="img/favico.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <script src="/shortcuts.js" defer></script>
     <title>Nucleon</title>
 </head>
 <body>
-    <header>
-    <div class="container">
-        <h1 id="hela">Nucleon</h1>
-        <i class="fas fa-search"><input type="search" placeholder="Search (ctrl+y)"></i>
-        <nav>
-            <ul class="list-flex">
-                <li>My Work</li>
-                <li>Spaces</li>
-                <li>Themes</li>
-                <li>Marketplace</li>
-                <li>Connect</li>
-            </ul>
-        </nav>
-        <div>
-            <a href="/signup"><input type="button" value="Login"></a>
-            <a href="#"><input type="button" value="See plans"></a>
+
+    <div class="headerTop">
+        <div class="metaLeft">
+          <span class="workspace-name">
+            <%= workspaceName %>
+          </span>
+      
+          <span class="workspacePlan">
+            <%= workspacePlan %>
+          </span>
+        </div>
+    
+        <div class="metaRight">
+          <span class="status">
+            <%= saveStatus %>
+          </span>
+        </div>
+    </div>
+
+    <header class="apsHead">
+
+        <div class="left">
+            </div>
+            <div class="logo">
+                <img src="/img" alt="Logo" />
+            </div>
+            <nav class="mainav">
+                <a href="/dashboard" class="navItem active">Dashboard</a>
+            </nav>
+        </div>
+        <div class="center">
+            <form action="/search" method="GET">
+                <i class="fa-solid fa-magnifying-glass search-icon" ></i>
+                <input type="text" name="q" placeholder="Search" aria-label="Search"/>
+                <span class="shortcut">Ctrl + y</span>
+            </form>
+          </div>
+
+       <div class="right">
+        
+            <button class="btn-new">
+              + New
+            </button>
+        
+            <button class="icon-btn" aria-label="Notifications">
+               <i class="fa-regular fa-bell"></i>
+            </button>
+        
+            <button class="icon-btn" aria-label="Help">
+               <i class="fa-regular fa-circle-question"></i>
+            </button>
+        
+            <button class="icon-btn" aria-label="Settings">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+        
+            <div class="avatar">
+              <%= userInitials %>
+            </div>
         </div>
     </header>
 </body>
