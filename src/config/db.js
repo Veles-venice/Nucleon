@@ -1,12 +1,29 @@
-const mysql = require("mysql2");
+const { MongoClient } = require("mongodb");
+const uri = "mongodb://localhost:27017";
+const dbName = "Nucleon";
 
-const pool = mysql.createPool({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
-  waitForConnections: true,
-  connectionLimit: 10
-});
+let dbClient;
+let db;
+async function connectDB() {
+  if (dbClient) return db;
 
-module.exports = pool.promise();
+  dbClient = new MongoClient(uri);
+
+  try {
+    await dbClient.connect();
+    console.log("Connected to DB");
+    db = dbClient.db(dbName);
+    return db;
+  } catch (err) {
+    console.error("MongoDB connection error:", err);
+    process.exit(1);
+  }
+}
+
+function getDB() {
+  if (!db) throw new Error("Database connection failed.");
+  return db;
+}
+
+
+module.exports = { connectDB, getDB };
