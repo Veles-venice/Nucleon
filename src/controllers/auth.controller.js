@@ -1,4 +1,4 @@
-const db = require("../config/db");
+const { getDB } = require("../config/db");
 const bcrypt = require("bcrypt");
 const { v4: uuidv4 } = require("uuid");
 
@@ -10,35 +10,35 @@ exports.signup = async (req, res) => {
       return res.status(400).json({ message: "Required fields missing" });
     }
 
-    const password_hash = await bcrypt.hash(password, 10);
-    const userId = uuidv4();
+    const db = getDB();
+    const users = db.collection("signup");
 
-    const sql = `
-      INSERT INTO signup 
-      (id, first_name, last_name, user_name, email, password_hash)
-      VALUES (?, ?, ?, ?, ?, ?)
-    `;
-
-    await db.execute(sql, [
-      userId,
-      first_name || null,
-      last_name || null,
-      user_name,
-      email,
-      password_hash
-    ]);
-
-    res.status(201).json({
-      message: "User registered successfully"
+    const existingUser = await users.findOne({
+      $or: [{ email }, { user_name }]
     });
-
-  } catch (error) {
-    if (error.code === "ER_DUP_ENTRY") {
+    if (existingUser) {
       return res.status(409).json({
         message: "Username or Email already exists"
       });
     }
 
+    const password_hash = await bcrypt.hash(password, 10);
+    const userId = uuidv4();
+
+    await users.insertOne({
+      _id: userId,
+      first_name: first_name || null,
+      last_name: last_name || null,
+      user_name,
+      email,
+      password_hash,
+      created_at_acc: new Date()
+    });
+
+    res.status(201).json({ message: "registered successfully" });
+
+  } catch (error) {
+    console.error(error);
     res.status(500).json({ error: error.message });
   }
 };
@@ -47,41 +47,41 @@ exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    const [rows] = await db.execute(
-      "SELECT * FROM signup WHERE email = ?",
-      [email]
-    );
+    if (!email || !password) {
+      return res.status(400).json({ message: "Required field(s) missing" });
+    }
 
-    if (rows.length === 0) {
+    const db = getDB();
+    const users = db.collection("signup");
+    const logins = db.collection("login");
+
+    const user = await users.findOne({ email });
+    if (!user) {
       return res.status(401).json({ message: "Invalid credentials" });
     }
 
-    const user = rows[0];
-
-    const isPasswordValid = await bcrypt.compare(
-      password,
-      user.password_hash
-    );
-
+    
+    const isPasswordValid = await bcrypt.compare(password, user.password_hash);
     if (!isPasswordValid) {
       return res.status(401).json({ message: "Invalid credentials" });
     }
-
-    await db.execute(
-      "INSERT INTO login (user_id) VALUES (?)",
-      [user.id]
-    );
+    
+    await logins.insertOne({
+      user_id: user._id,
+      login_time: new Date()
+    });
 
     res.json({
       message: "Login successful",
       user: {
-        id: user.id,
+        id: user._id,
         user_name: user.user_name,
         email: user.email
       }
     });
 
   } catch (error) {
+    console.error(error);
     res.status(500).json({ error: error.message });
   }
 };
