@@ -1,3 +1,31 @@
+body{
+    background-color: rgb(19, 17, 17);
+    color: rgb(179, 172, 172);
+}
+.forYouPage{
+    padding: 30px;
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.headerLinks a{
+    text-decoration: none;
+    color: rgb(179, 172, 172);
+    margin-left: 20px;
+}
+.headerLinks a:hover{
+    color: gray;
+}
+.GRID{
+    display:flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    align-items: center;
    
     
     
