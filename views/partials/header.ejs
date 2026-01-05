@@ -14,65 +14,62 @@
 </head>
 <body>
 
-    <div class="headerTop">
-        <div class="metaLeft">
-          <span class="workspace-name">
-            <%= workspaceName %>
-          </span>
-      
-          <span class="workspacePlan">
-            <%= workspacePlan %>
-          </span>
-        </div>
+  <div class="headerTop">
+      <div class="metaLeft">
+        <span class="workspace-name">
+          <%= workspaceName %>
+        </span>
     
-        <div class="metaRight">
-          <span class="status">
-            <%= saveStatus %>
-          </span>
-        </div>
-    </div>
-
-    <header class="apsHead">
-
-        <div class="left">
-            </div>
-            <div class="logo">
-                <img src="/img" alt="Logo" />
-            </div>
-            <nav class="mainav">
-                <a href="/dashboard" class="navItem active"><%- currentWorkingSpace %></a>
-            </nav>
-        </div>
-        <div class="center">
-            <form action="/search" method="GET">
-                <i class="fa-solid fa-magnifying-glass search-icon" ></i>
-                <input type="text" name="q" placeholder="Search" aria-label="Search"/>
-                <span class="shortcut">Ctrl + y</span>
-            </form>
+        <span class="workspacePlan">
+          <%= workspacePlan %>
+        </span>
+      </div>
+  
+      <div class="metaRight">
+        <span class="status">
+          <%= saveStatus %>
+        </span>
+      </div>
+  </div>
+  <header class="apsHead">
+      <div class="left">
           </div>
-
-       <div class="right">
-        
-            <button class="btn-new">
-              + New
-            </button>
-        
-            <button class="icon-btn" aria-label="Notifications">
-               <i class="fa-regular fa-bell"></i>
-            </button>
-        
-            <button class="icon-btn" aria-label="Help">
-               <i class="fa-regular fa-circle-question"></i>
-            </button>
-        
-            <button class="icon-btn" aria-label="Settings">
-                <i class="fa-solid fa-gear"></i>
-            </button>
-        
-            <div class="avatar">
-              <%= userInitials %>
-            </div>
+          <div class="logo">
+              <img src="/img" alt="Logo" />
+          </div>
+          <nav class="mainav">
+              <a href="/dashboard" class="navItem active"><%- currentWorkingSpace %></a>
+          </nav>
+      </div>
+      <div class="center">
+          <form action="/search" method="GET">
+              <i class="fa-solid fa-magnifying-glass search-icon" ></i>
+              <input type="text" name="q" placeholder="Search" aria-label="Search"/>
+              <span class="shortcut">Ctrl + y</span>
+          </form>
         </div>
-    </header>
+     <div class="right">
+      
+          <button class="btn-new">
+            + New
+          </button>
+      
+          <button class="icon-btn" aria-label="Notifications">
+             <i class="fa-regular fa-bell"></i>
+          </button>
+      
+          <button class="icon-btn" aria-label="Help">
+             <i class="fa-regular fa-circle-question"></i>
+          </button>
+      
+          <button class="icon-btn" aria-label="Settings">
+              <i class="fa-solid fa-gear"></i>
+          </button>
+      
+          <div class="avatar">
+            <%= userInitials %>
+          </div>
+      </div>
+  </header>
 </body>
 </html>
