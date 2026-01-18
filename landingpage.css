@@ -1,0 +1,333 @@
+body {
+  background-color: rgb(11, 11, 15);
+  color: rgb(245, 245, 245 ,);
+  line-height: 1.6;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  background: rgb(11, 11, 15);
+  border-bottom: 1px solid rgb(31, 31, 46);
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: bold;
+  color: rgb(250, 250, 251);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  color: rgb(220, 220, 220);
+}
+
+.nav-links li:hover {
+  color: rgb(181, 181, 185);
+}
+
+.social-icons i {
+  margin-left: 15px;
+  cursor: pointer;
+  color: rgb(220, 220, 220);
+}
+
+.social-icons i:hover {
+  color: rgb(181, 181, 185);
+}
+
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+   color: rgb(247, 247, 249);
+
+}
+
+.hero h2 {
+  font-size: 44px;
+  color: rgb(247, 247, 249);
+}
+
+.hero p {
+  color: rgb(189, 189, 189);
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+
+.Dashboard {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.Dashboard .card {
+  width: 80%;
+  height: 500px;
+  background-color: rgba(3, 3, 3);
+  border: rgb(201, 192, 192), 2px,solid;
+  border-radius: 20px;
+}
+
+
+.section {
+  padding: 80px 60px;
+}
+
+.section h1,
+.section h2 {
+  margin-bottom: 30px;
+}
+
+
+.cards {
+  display: flex;
+  gap: 30px;
+}
+
+.cards .card {
+  flex: 1;
+  height: 600px;
+  background:  rgb(255, 255, 255,0.7);
+  border-radius: 18px;
+}
+.cards .card .minicard{
+    flex: 1;
+    width: 80%;
+    height: 400px;
+    background-color: black;
+    margin-left: 10%;
+    margin-top: 10%;
+    border-radius: 18px;
+    }
+
+.get{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(247, 247, 249);
+}
+
+.forWho {
+  text-align: center;
+  height: 400px;
+  font-size: 30px;
+   color: rgb(247, 247, 249);
+  
+}
+.circle{
+  display: flex;
+  gap: 400px;
+  height: 400px;
+  width: 100%;
+  justify-content: space-around;
+  
+
+}
+.circle2{
+  background-color:  rgb(255, 255, 255,0.7);
+  height: 200px;
+  width: 15%;
+  border-radius: 100%;
+} 
+
+.features {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(247, 247, 249);
+}
+.box{
+  height: 500px;
+  display: flex;
+  gap: 20px;
+
+}
+.miniBox{
+  background-color: rgb(255, 255, 255,0.7);
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  
+  
+  
+}
+.BigBox{
+  display: flex;
+  gap:20px
+}
+.bigone{
+   background-color: rgb(255, 255, 255,0.7);
+  height: 300px;
+  width: 200%;
+  border-radius: 10px;
+
+}
+
+
+.testimonial {
+  text-align: center;
+  font-size: 30px;
+  height: 600px;
+   color: rgb(247, 247, 249);
+}
+.testinomialBox{
+  background-color: rgb(255, 255, 255,0.7);
+  height: 500px;
+  width: 100%;
+  border-radius:10px;
+  
+}
+
+
+.plugins {
+ 
+  font-size: 30px;
+  color: rgb(247, 247, 249);
+}
+
+.plugins p1 {
+  color: rgb(189, 189, 189);
+  font-size: 16px;
+}
+
+
+.pricing {
+  text-align: center;
+  font-size: 30px;
+   color: rgb(247, 247, 249);
+}
+.pricingBox{
+  display: flex;
+  gap:100px;
+  
+  
+}
+.moneyBox{
+  background-color: rgb(255, 255, 255,0.7);
+  height: 600px;
+  width: 50%;
+  border-radius: 10px;
+
+}
+
+
+.special {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(247, 247, 249);
+
+  
+
+}
+.wide{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.special .widebox{
+    height: 100px;
+    background-color: rgb(255, 255, 255,0.7) ;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.footer {
+  background: rgb(29, 29, 32);
+  padding: 60px;
+  text-align: center;
+}
+
+.footer h1 {
+  color: rgb(250, 250, 251);
+}
+
+.footer p1 {
+  color: rgb(189, 189, 189);
+}
+
+
+.subscribe {
+  margin-top: 30px;
+}
+
+.subscribe-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.subscribe-box input {
+  padding: 12px;
+  width: 260px;
+  border: none;
+  outline: none;
+  border-radius: 8px 0 0 8px;
+}
+
+.subscribe-box button {
+  padding: 12px 20px;
+  background: rgb(133, 133, 233);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+}
+
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.footer ul li {
+  cursor: pointer;
+  color: rgb(189, 189, 189);
+}
+
+.footer ul li:hover {
+  color: rgb(124, 124, 255);
+}
+
+
+.footer-bottom {
+  background: rgb(8, 8, 13);
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-left ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.bottom-left li {
+  font-size: 14px;
+  color: rgb(189, 189, 189);
+}
+
+.bottom-right p {
+  font-size: 14px;
+  color: rgb(189, 189, 189);
+}
+
