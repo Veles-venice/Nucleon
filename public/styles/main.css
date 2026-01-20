@@ -5,7 +5,30 @@
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 20px;
 }
-body{
+
+body {
   background-color: black;
   color:antiquewhite;
+  display: grid;
+
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto 1fr;
+
+  height: 100vh;
+}
+
+#propHead {
+  grid-area: header;
+}
+
+.sidebarSpecial {
+  grid-area: sidebar;
+}
+
+main {
+  grid-area: main;
 }
